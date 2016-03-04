@@ -1,0 +1,42 @@
+<!DOCTYPE validators PUBLIC "-//Apache Struts//XWork Validator 1.0.3//EN"
+		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+<validators>
+	<validator type="requiredstring">
+		<param name="fieldName">personBean.firstName</param>
+		<message>First name is required.</message>
+	</validator>
+	<validator type="requiredstring">
+		<param name="fieldName">personBean.lastName</param>
+		<message>Last name is required.</message>
+	</validator>
+	<validator type="requiredstring">
+		<param name="fieldName">personBean.dateOfBirth</param>
+		<message>Date of birth is required.</message>
+	</validator>
+	<validator type="requiredstring">
+		<param name="fieldName">personBean.phoneNumber</param>
+		<message>Phone number is required.</message>
+	</validator>
+	<validator type="regex">
+		<param name="fieldName">personBean.phoneNumber</param>
+		<param name="regex"><![CDATA[\d{3}-\d{3}-\d{4}]]></param>
+		<message>Phone number must be entered as 999-999-9999.</message>
+	</validator>
+	<validator type="requiredstring">
+		<param name="fieldName">personBean.city</param>
+		<message>City name is required.</message>
+	</validator>
+	<validator type="requiredstring">
+		<param name="fieldName">personBean.street</param>
+		<message>Street name is required.</message>
+	</validator>
+	<validator type="requiredstring">
+		<param name="fieldName">personBean.apartment</param>
+		<message>Apartment number is required.</message>
+	</validator>
+	<validator type="regex">
+		<param name="fieldName">personBean.apartment</param>
+		<param name="regex"><![CDATA[[1-9]\d*]]></param>
+		<message>Apartment number must be numeric.</message>
+	</validator>
+</validators>
